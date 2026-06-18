@@ -1,0 +1,1 @@
+# sentimental_analysis_of_company_review_thesis
