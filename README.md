@@ -4,22 +4,32 @@
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
-This repository contains the implementation, experiments, and prototype application developed as part of the Master's thesis:
+This repository contains the implementation, experiments, and 
+prototype application developed as part of the Master's thesis:
 
-**"Multi-Class Sentiment Analysis of Company Reviews Using Ensemble Deep Learning Models for Employer Branding."**
+**"Multi-Class Sentiment Analysis of Company Reviews Using Ensemble 
+Deep Learning Models for Employer Branding"**
 
-The study investigates how Natural Language Processing (NLP) and Deep Learning techniques can be used to analyse employee reviews and support employer branding insights.
+The study investigates how Natural Language Processing (NLP) and 
+Deep Learning techniques can be used to analyse employee reviews 
+and support employer branding insights. All model training and 
+evaluation was conducted on a real Glassdoor dataset of 7,500 
+stratified reviews.
 
-The research evaluates individual and ensemble deep learning models for classifying employee reviews into:
+The research evaluates individual and ensemble deep learning models 
+for classifying employee reviews into three sentiment classes:
 
-* Positive
-* Neutral
-* Negative
+- Positive
+- Neutral  
+- Negative
 
-The project also includes a lightweight prototype application (**EmpulseAI**) for comparative company sentiment analysis and visualisation.
-
+The project also includes **EmpulseAI** — a prototype web application 
+for comparative company sentiment analysis and visualisation. The 
+prototype displays simulated demonstration metrics for platform 
+illustration purposes; real experimental results are in the Colab 
+notebook.
 ---
 
 ## 🎯 Research Objectives
@@ -82,22 +92,6 @@ Models are evaluated using:
 * Recall
 * Macro F1-Score
 * Confusion Matrix
-
----
-
-## 📊 Key Research Questions
-
-The study investigates:
-
-1. Can ensemble deep learning models outperform individual models for employee review sentiment classification?
-
-2. How effectively can RoBERTa be fine-tuned for employer-review sentiment analysis?
-
-3. Which ensemble strategy performs best for multi-class sentiment classification?
-
-4. How can sentiment analysis support employer branding and organisational reputation management?
-
-5. Can a web-based sentiment comparison platform provide meaningful employer insights?
 
 ---
 
