@@ -199,28 +199,11 @@ Potential future improvements include:
 
 ---
 
-## 🔒 Ethical Considerations
-
-* Data used solely for academic research purposes
-* No personally identifiable information (PII) is included
-* Results are intended as decision-support tools and not automated decision-making systems
-
----
-
 ## 👤 Authors
 
 **Raja Ramaraj**
 
 **Santhosh Selvan**
 
-Master's Thesis
+Master’s Thesis MSc Data Science and AI, Digital Analytics
 
-MSc Data Science
-
----
-
-## 📄 License
-
-This repository is intended for academic and research purposes only.
-
----
