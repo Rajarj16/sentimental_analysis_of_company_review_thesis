@@ -26,11 +26,12 @@ The project also includes a lightweight prototype application (**EmpulseAI**) fo
 
 The objectives of this study are:
 
-* To analyse employee review sentiment using NLP techniques
-* To develop and evaluate RoBERTa and Bi-LSTM sentiment classification models
-* To compare multiple ensemble learning strategies
-* To evaluate model performance using standard classification metrics
-* To develop a web-based prototype for company sentiment comparison and employer branding analysis
+1. What is the performance gap between the RoBERTa + Bi-LSTM ensemble and individual baseline models?
+2. What is the contribution of domain-specific fine-tuning of RoBERTa to classification performance?
+3. Which ensemble integration strategy — hard voting, soft voting, weighted averaging, or stacking — produces the highest Macro F1-Score?
+4. How do sentiment classification patterns correlate with employer branding metrics such as star ratings?
+5. Can a web-based multi-company employer sentiment comparison platform generate interpretable results for HR practitioners?
+6. What linguistic features and thematic patterns characterise positive, neutral, and negative employer reviews?
 
 ---
 
@@ -128,61 +129,51 @@ The dataset contains employee review text, company ratings, and sentiment-relate
 
 ---
 
-## 🛠️ Technologies Used
+## Models and Methods
 
-### Programming Language
+### Base Models
+- **RoBERTa-base** (Liu et al., 2019) — 124.6M parameters, domain fine-tuned in 2 stages
+- **Bi-LSTM** (Hochreiter & Schmidhuber, 1997) — 5.85M parameters, GloVe-300 embeddings
 
-* Python
+### Ensemble Strategies
+- Soft Voting (equal-weight probability averaging)
+- Hard Voting (majority class voting)
+- Weighted Averaging (w₁=0.6 RoBERTa, w₂=0.4 Bi-LSTM)
+- Stacking with Logistic Regression meta-classifier (5-fold OOF)
 
-### Machine Learning & NLP
+### Explainability
+- **SHAP** (SHapley Additive exPlanations) — token-level feature importance
+- Dominant positive features: "great", "management", "pay"
+- Dominant negative features: "terrible", "management", "return"
 
-* Transformers
-* PyTorch
-* Scikit-learn
-* NLTK
+---
+## Technologies
 
-### Data Analysis
-
-* Pandas
-* NumPy
-
-### Visualisation
-
-* Matplotlib
-* Seaborn
-
-### Web Application
-
-* HTML
-* CSS
-* JavaScript
+| Category | Tools |
+|---|---|
+| Language | Python 3 |
+| Deep Learning | PyTorch, Hugging Face Transformers |
+| Classical ML | Scikit-learn |
+| NLP | NLTK, GloVe-300, SHAP |
+| Data | Pandas, NumPy |
+| Visualisation | Matplotlib, Seaborn |
+| Web Prototype | HTML, CSS, JavaScript |
+| Environment | Google Colab |
 
 ---
 
-## ▶️ Running the Project
+## Running the Project
 
-### Clone Repository
+### Open the Notebook in Google Colab
 
-```bash
-git clone https://github.com/YOUR_USERNAME/EmpulseAI.git
-cd EmpulseAI
-```
+Upload `EmpulseAI_Thesis_Notebook_REAL_DATA.ipynb` and `glassdoor_sample_for_colab.csv` to Google Colab and run all cells sequentially.
 
-### Open Notebook
+### View the Web Prototype
 
-```bash
-jupyter notebook EmpulseAI_Thesis_Notebook_REAL_DATA.ipynb
-```
+Open `index.html` in any web browser, or visit the live demo:
+https://employer-sentiment-thesis.netlify.app
 
-### Launch Web Application
-
-Open:
-
-```text
-index.html
-```
-
-in your web browser.
+Note: The prototype displays simulated demonstration metrics. Real experimental results are in the notebook.
 
 ---
 
