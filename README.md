@@ -217,8 +217,6 @@ Master's Thesis
 
 MSc Data Science
 
-University of Hertfordshire
-
 ---
 
 ## 📄 License
